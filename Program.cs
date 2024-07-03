@@ -58,10 +58,7 @@ namespace StudentsSelector
                             GetRidStudents.DeleteStudents();
                             break;
                         case 4:
-<<<<<<< HEAD
                             // Implementar lógica para la opción 4
-=======
->>>>>>> bf368a8ab4ab6dd515e5ac33feffe32a8900488b
                             AddStudents.AddStudent();
                             break;
                         case 5:

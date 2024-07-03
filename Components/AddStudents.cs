@@ -27,11 +27,7 @@ namespace StudentsSelector
 
                     if (index != -1)
                     {
-<<<<<<< HEAD
                         StudentsList.AllStudents[index] = UserSelection;
-=======
-                        Students[index] = UserSelection;
->>>>>>> bf368a8ab4ab6dd515e5ac33feffe32a8900488b
                         Console.WriteLine($"Estudiante '{UserSelection}' añadido exitosamente.");
                     }
                     else

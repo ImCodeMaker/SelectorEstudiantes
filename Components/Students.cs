@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace StudentsSelector
 {
     public static class StudentsList
@@ -83,7 +86,6 @@ namespace StudentsSelector
         }
 
         public static void ResizeArray()
-<<<<<<< HEAD
         {
             // Create a new array with the increased size
             string[] newArray = new string[AllStudents.Length + 1];
@@ -111,35 +113,6 @@ namespace StudentsSelector
             studentCount--;
         }
 
-=======
-        {
-            // Create a new array with the increased size
-            string[] newArray = new string[AllStudents.Length + 1];
-            Array.Copy(AllStudents, newArray, AllStudents.Length);
-            AllStudents = newArray;
-        }
-
-        // Method to remove a student at a specific index
-public static void RemoveStudentAt(int index)
-{
-    if (index < 0 || index >= studentCount)
-    {
-        throw new IndexOutOfRangeException("Index is out of range.");
-    }
-
-    // Shift elements left to overwrite the removed student
-    for (int i = index; i < studentCount - 1; i++)
-    {
-        AllStudents[i] = AllStudents[i + 1];
-    }
-
-    // Clear the last element and decrement studentCount
-    AllStudents[studentCount - 1] = " ";
-    studentCount--;
-}
-
-
->>>>>>> bf368a8ab4ab6dd515e5ac33feffe32a8900488b
         // Method to get the current student count
         public static int GetStudentCount()
         {

@@ -13,3 +13,33 @@ C:\Users\xxjos\Documents\ITLA\Fundamentos de Programacion TDS-002\Projectos Prog
 C:\Users\xxjos\Documents\ITLA\Fundamentos de Programacion TDS-002\Projectos Programacion\ProjectosFinales\SelectorEstudiantes\obj\Debug\net8.0\SelectorEstudiantes.genruntimeconfig.cache
 C:\Users\xxjos\Documents\ITLA\Fundamentos de Programacion TDS-002\Projectos Programacion\ProjectosFinales\SelectorEstudiantes\obj\Debug\net8.0\ref\SelectorEstudiantes.dll
 C:\Users\xxjos\Documents\ITLA\Fundamentos de Programacion TDS-002\Projectos Programacion\ProjectosFinales\SelectorEstudiantes\obj\Debug\net8.0\SelectorEstudiantes.sourcelink.json
+C:\Users\xxjos\Desktop\EncasoDE\bin\Debug\net8.0\SelectorEstudiantes.exe
+C:\Users\xxjos\Desktop\EncasoDE\bin\Debug\net8.0\SelectorEstudiantes.deps.json
+C:\Users\xxjos\Desktop\EncasoDE\bin\Debug\net8.0\SelectorEstudiantes.runtimeconfig.json
+C:\Users\xxjos\Desktop\EncasoDE\bin\Debug\net8.0\SelectorEstudiantes.dll
+C:\Users\xxjos\Desktop\EncasoDE\bin\Debug\net8.0\SelectorEstudiantes.pdb
+C:\Users\xxjos\Desktop\EncasoDE\obj\Debug\net8.0\SelectorEstudiantes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xxjos\Desktop\EncasoDE\obj\Debug\net8.0\SelectorEstudiantes.AssemblyInfoInputs.cache
+C:\Users\xxjos\Desktop\EncasoDE\obj\Debug\net8.0\SelectorEstudiantes.AssemblyInfo.cs
+C:\Users\xxjos\Desktop\EncasoDE\obj\Debug\net8.0\SelectorEstudiantes.csproj.CoreCompileInputs.cache
+C:\Users\xxjos\Desktop\EncasoDE\obj\Debug\net8.0\SelectorEstudiantes.sourcelink.json
+C:\Users\xxjos\Desktop\EncasoDE\obj\Debug\net8.0\SelectorEstudiantes.dll
+C:\Users\xxjos\Desktop\EncasoDE\obj\Debug\net8.0\refint\SelectorEstudiantes.dll
+C:\Users\xxjos\Desktop\EncasoDE\obj\Debug\net8.0\SelectorEstudiantes.pdb
+C:\Users\xxjos\Desktop\EncasoDE\obj\Debug\net8.0\SelectorEstudiantes.genruntimeconfig.cache
+C:\Users\xxjos\Desktop\EncasoDE\obj\Debug\net8.0\ref\SelectorEstudiantes.dll
+C:\Users\xxjos\Desktop\SelectorEstudiantes\bin\Debug\net8.0\SelectorEstudiantes.exe
+C:\Users\xxjos\Desktop\SelectorEstudiantes\bin\Debug\net8.0\SelectorEstudiantes.deps.json
+C:\Users\xxjos\Desktop\SelectorEstudiantes\bin\Debug\net8.0\SelectorEstudiantes.runtimeconfig.json
+C:\Users\xxjos\Desktop\SelectorEstudiantes\bin\Debug\net8.0\SelectorEstudiantes.dll
+C:\Users\xxjos\Desktop\SelectorEstudiantes\bin\Debug\net8.0\SelectorEstudiantes.pdb
+C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\SelectorEstudiantes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\SelectorEstudiantes.AssemblyInfoInputs.cache
+C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\SelectorEstudiantes.AssemblyInfo.cs
+C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\SelectorEstudiantes.csproj.CoreCompileInputs.cache
+C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\SelectorEstudiantes.sourcelink.json
+C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\SelectorEstudiantes.dll
+C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\refint\SelectorEstudiantes.dll
+C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\SelectorEstudiantes.pdb
+C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\SelectorEstudiantes.genruntimeconfig.cache
+C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\ref\SelectorEstudiantes.dll
