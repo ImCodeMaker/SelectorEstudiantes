@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xxjos\\Documents\\ITLA\\Fundamentos de Programacion TDS-002\\Projectos Programacion\\ProjectosFinales\\SelectorEstudiantes\\SelectorEstudiantes.csproj": {}
+    "C:\\Users\\xxjos\\Desktop\\SelectorEstudiantes\\SelectorEstudiantes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xxjos\\Documents\\ITLA\\Fundamentos de Programacion TDS-002\\Projectos Programacion\\ProjectosFinales\\SelectorEstudiantes\\SelectorEstudiantes.csproj": {
+    "C:\\Users\\xxjos\\Desktop\\SelectorEstudiantes\\SelectorEstudiantes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xxjos\\Documents\\ITLA\\Fundamentos de Programacion TDS-002\\Projectos Programacion\\ProjectosFinales\\SelectorEstudiantes\\SelectorEstudiantes.csproj",
+        "projectUniqueName": "C:\\Users\\xxjos\\Desktop\\SelectorEstudiantes\\SelectorEstudiantes.csproj",
         "projectName": "SelectorEstudiantes",
-        "projectPath": "C:\\Users\\xxjos\\Documents\\ITLA\\Fundamentos de Programacion TDS-002\\Projectos Programacion\\ProjectosFinales\\SelectorEstudiantes\\SelectorEstudiantes.csproj",
+        "projectPath": "C:\\Users\\xxjos\\Desktop\\SelectorEstudiantes\\SelectorEstudiantes.csproj",
         "packagesPath": "C:\\Users\\xxjos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xxjos\\Documents\\ITLA\\Fundamentos de Programacion TDS-002\\Projectos Programacion\\ProjectosFinales\\SelectorEstudiantes\\obj\\",
+        "outputPath": "C:\\Users\\xxjos\\Desktop\\SelectorEstudiantes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\xxjos\\AppData\\Roaming\\NuGet\\NuGet.Config",
