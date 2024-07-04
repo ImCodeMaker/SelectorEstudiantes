@@ -8,7 +8,7 @@ namespace StudentsSelector
         {
             int validCount = 0;
 
-            // Contar los elementos no vacíos en AllStudents
+            
             for (int i = 0; i < StudentsList.AllStudents.Length; i++)
             {
                 if (!string.IsNullOrEmpty(StudentsList.AllStudents[i]))

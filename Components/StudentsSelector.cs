@@ -25,7 +25,7 @@ namespace StudentsSelector
                 switch (userAnswer)
                 {
                     case "si":
-                        Console.Clear(); // Limpiar la consola
+                        Console.Clear(); 
                         try
                         {
                             string developer = SelectStudent(Role ?? "Desarrollador en Vivo:");
@@ -35,19 +35,19 @@ namespace StudentsSelector
                             {
                                 Console.WriteLine("No hay suficientes estudiantes disponibles.");
                                 ProgramExecution();
-                                programRunning = false; // Terminar el bucle después de asignar todos los roles
+                                programRunning = false; 
                             }
                             else
                             {
                                 Console.WriteLine($"{Role} seleccionado: {developer}");
                                 Console.WriteLine($"{Role2} seleccionado: {facilitator}");
 
-                                // Verificar si el último estudiante ha sido seleccionado como desarrollador en vivo
+                               
                                 if (developer == "LAST_STUDENT_SELECTED")
                                 {
                                     Console.WriteLine("¡Todos los estudiantes han sido asignados roles!");
                                     ProgramExecution();
-                                    programRunning = false; // Terminar el bucle después de asignar todos los roles
+                                    programRunning = false; 
                                 }
                                 else
                                 {
@@ -60,10 +60,10 @@ namespace StudentsSelector
                         {
                             Console.WriteLine($"Error: {ex.Message}");
                             Console.WriteLine("Se ha producido un error. Reiniciando el programa...");
-                            Thread.Sleep(2000); // Espera para que el usuario vea el mensaje de error
-                            Console.Clear(); // Limpiar la consola
+                            Thread.Sleep(2000); 
+                            Console.Clear(); 
                             ProgramExecution();
-                            programRunning = false; // Terminar el bucle después de un error
+                            programRunning = false; 
                         }
                         break;
                     case "volver":
@@ -135,7 +135,7 @@ namespace StudentsSelector
             }
 
             int attempts = 0;
-            while (attempts < studentCount * 2) // Avoid infinite loop by limiting attempts
+            while (attempts < studentCount * 2) 
             {
                 int index = randomIndex % studentCount;
                 string selectedStudent = StudentsList.AllStudents[index];
@@ -145,7 +145,7 @@ namespace StudentsSelector
                 {
                     StudentsList.AssignedRoles[selectedStudent] = role;
 
-                    // Eliminar el estudiante del array
+                    
                     StudentsList.RemoveStudentAt(index);
 
                     return selectedStudent;
@@ -155,7 +155,7 @@ namespace StudentsSelector
                 attempts++;
             }
 
-            return "NO_STUDENTS_AVAILABLE"; // In case no suitable student is found within the attempts
+            return "NO_STUDENTS_AVAILABLE"; 
         }
 
         public static void ProgramExecution()

@@ -13,7 +13,7 @@ namespace StudentsSelector
 
             if (!string.IsNullOrEmpty(UserSelection))
             {
-                // Check if the student already exists
+                
                 bool studentExists = Array.Exists(Students, student => student == UserSelection);
 
                 if (studentExists)
@@ -22,7 +22,7 @@ namespace StudentsSelector
                 }
                 else
                 {
-                    // Find the first empty slot in the array
+                    
                     int index = Array.IndexOf(Students, string.Empty);
 
                     if (index != -1)

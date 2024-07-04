@@ -8,7 +8,7 @@ namespace StudentsSelector
         {
             string[] Students = StudentsList.AllStudents;
 
-            Console.Write("Enter the name of the student to delete: ");
+            Console.Write("Ingresa el nombre del estudiante a eliminar: ");
             string? UserSelection = Console.ReadLine();
 
             if (!string.IsNullOrEmpty(UserSelection))
@@ -21,7 +21,7 @@ namespace StudentsSelector
                     {
                         StudentsList.RemoveStudentAt(i);
                         studentDeleted = true;
-                        i--; // Adjust index after removal
+                        i--; 
                     }
                 }
 
@@ -30,7 +30,7 @@ namespace StudentsSelector
                     Console.WriteLine("Updated list of students:");
                     foreach (string student in StudentsList.AllStudents)
                     {
-                        if (!string.IsNullOrEmpty(student)) // Display only valid names
+                        if (!string.IsNullOrEmpty(student)) 
                         {
                             Console.WriteLine(student);
                         }

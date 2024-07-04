@@ -62,9 +62,6 @@ namespace StudentsSelector
                             AddStudents.AddStudent();
                             break;
                         case 5:
-                            
-                            break;
-                        case 6:
                             isProgramRunning = false; // Salir del programa
                             Environment.Exit(0);
                             break;
