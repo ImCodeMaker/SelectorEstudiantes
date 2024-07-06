@@ -8,10 +8,10 @@ namespace StudentsSelector
         public static string[] AllStudents { get; private set; }
         private static int studentCount;
 
-        // New property for assigned roles
+        
         public static Dictionary<string, string> AssignedRoles { get; set; }
 
-        // Static constructor to initialize arrays
+        
         static StudentsList()
         {
             AssignedRoles = new Dictionary<string, string>();
@@ -49,7 +49,7 @@ namespace StudentsSelector
             studentCount = AllStudents.Length;
         }
 
-        // Method to reset all students (for testing or initialization)
+        
         public static void ResetAllStudents()
         {
             AllStudents = new string[]
