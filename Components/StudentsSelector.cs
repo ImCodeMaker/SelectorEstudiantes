@@ -6,6 +6,8 @@ namespace StudentsSelector
     public static class ProgramStudents
     {
         private static string? Role;
+        
+        public const string NameFile = "StudentResult.xlsx";
         private static string? Role2;
         private static bool UserAssignedRoles = false;
         private static Random random = new Random(); // Generador aleatorio único
@@ -88,11 +90,13 @@ namespace StudentsSelector
                             }
                             else
                             {
-
                                 MostrarTexto();
                                 Console.WriteLine($"{Role} seleccionado: {developer}");
                                 Console.WriteLine($"{Role2} seleccionado: {facilitator}");
+                                DateTime now = DateTime.Now;
+                                string formattedDate = now.ToString("yyyy-MM-dd HH:mm:ss");
                                 Sounds.Final();
+                                Excel.AddToExcelFile(NameFile,developer,facilitator,formattedDate);
                                 Thread.Sleep(10000);
                                 if (developer == "LAST_STUDENT_SELECTED")
                                 {
@@ -185,6 +189,8 @@ namespace StudentsSelector
                 Console.WriteLine("----------------------------------------");
                 Console.WriteLine("Presiona cualquier tecla para continuar...");
                 Console.ReadKey();
+
+
 
                 return "LAST_STUDENT_SELECTED";
             }

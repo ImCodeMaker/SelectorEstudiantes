@@ -23,8 +23,10 @@ namespace StudentsSelector
                 "2. Ver la lista de Estudiantes",
                 "3. Eliminar un Estudiante",
                 "4. Agregar un Estudiante",
-                "5. Salir",
-                "6. Opcion Secreta"
+                "5. Borrar Registro",
+                "6. Salir",
+                "7. Opcion Secreta",
+
             };
 
             foreach (var option in menuOptions)

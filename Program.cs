@@ -33,7 +33,7 @@ namespace StudentsSelector
             return name;
         }
 
-        
+
 
         public static void Main(string[] args)
         {
@@ -52,6 +52,11 @@ namespace StudentsSelector
                     switch (choice)
                     {
                         case 1:
+                            Console.ResetColor();
+                            Console.Clear();
+                            Console.ResetColor();
+                            Console.Clear();
+                            Console.ResetColor();
                             Console.Clear();
                             Console.ResetColor();
                             Console.Clear();
@@ -62,7 +67,7 @@ namespace StudentsSelector
                             Console.ResetColor();
                             ShowStudents.ShowStudentsF();
                             Console.WriteLine("\nPresiona cualquier tecla para regresar al menú principal...");
-                            Console.ReadKey(true); 
+                            Console.ReadKey(true);
                             Console.ResetColor();
                             Console.Clear();
                             break;
@@ -75,14 +80,17 @@ namespace StudentsSelector
                             AddStudents.AddStudent();
                             break;
                         case 5:
+                            MyClass.Clear();
+                            break;
+                        case 6:
                             Console.Clear();
                             isProgramRunning = false;
                             Console.ResetColor();
                             Console.Clear();
-                            
+
                             Environment.Exit(0);
                             break;
-                        case 6:
+                        case 7:
                             string url = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
 
                             Console.WriteLine("Opening the YouTube video...");
