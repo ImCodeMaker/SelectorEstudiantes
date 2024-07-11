@@ -26,6 +26,8 @@ namespace StudentsSelector
 
             Console.WriteLine("\nPresiona cualquier tecla para continuar...");
             Console.ReadKey();
+            Console.Clear();
+            Console.ResetColor();
         }
 
         private static void CenterText(string[] textLines)

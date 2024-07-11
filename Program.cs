@@ -55,6 +55,7 @@ namespace StudentsSelector
                             ProgramStudents.Init(); // Ejecutar la opción 1 (Init)
                             break;
                         case 2:
+                            Console.ResetColor();
                             Console.Clear();
 
                             // Display students within the console
@@ -62,6 +63,7 @@ namespace StudentsSelector
                             Console.ResetColor();
                             Console.Clear();
                             Console.ResetColor();
+                            Console.Clear();
                             break;
                         case 3:
                             Console.ResetColor();
@@ -74,6 +76,8 @@ namespace StudentsSelector
                         case 5:
                             Console.Clear();
                             isProgramRunning = false;
+                            Console.ResetColor();
+                            Console.Clear();
                             Environment.Exit(0);
                             break;
                         case 6:

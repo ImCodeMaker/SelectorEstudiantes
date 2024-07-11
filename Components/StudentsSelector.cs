@@ -8,6 +8,7 @@ namespace StudentsSelector
         private static string? Role;
         private static string? Role2;
         private static bool UserAssignedRoles = false;
+        private static Random random = new Random(); // Generador aleatorio único
 
         public static void Init()
         {
@@ -25,9 +26,37 @@ namespace StudentsSelector
                 switch (userAnswer)
                 {
                     case "si":
-                        Console.Clear(); 
+                        Console.Clear();
                         try
                         {
+                            if (!UserAssignedRoles)
+                            {
+                                Console.WriteLine($"Antes de continuar, ¿deseas modificar los roles? Escribe 'Si' para continuar, 'No' para seguir con la ejecución.");
+                                string? UserResponse = Console.ReadLine()?.ToLower();
+
+                                if (UserResponse == "si")
+                                {
+                                    Console.WriteLine($"Ingrese el nuevo rol:");
+                                    Role = Console.ReadLine();
+
+                                    Console.WriteLine($"¿Quieres modificar el segundo rol?");
+                                    string? UserResponse2 = Console.ReadLine()?.ToLower();
+
+                                    if (UserResponse2 == "si")
+                                    {
+                                        Console.WriteLine($"Ingrese el nuevo segundo rol:");
+                                        Role2 = Console.ReadLine();
+                                    }
+
+                                    UserAssignedRoles = true;
+                                }
+                                else if (UserResponse == "no")
+                                {
+                                    Console.WriteLine("Continuando con la ejecución sin modificar roles.");
+                                    UserAssignedRoles = true;
+                                }
+                            }
+
                             string developer = SelectStudent(Role ?? "Desarrollador en Vivo:");
                             string facilitator = SelectStudent(Role2 ?? "Facilitador:");
 
@@ -35,19 +64,18 @@ namespace StudentsSelector
                             {
                                 Console.WriteLine("No hay suficientes estudiantes disponibles.");
                                 ProgramExecution();
-                                programRunning = false; 
+                                programRunning = false;
                             }
                             else
                             {
                                 Console.WriteLine($"{Role} seleccionado: {developer}");
                                 Console.WriteLine($"{Role2} seleccionado: {facilitator}");
 
-                               
                                 if (developer == "LAST_STUDENT_SELECTED")
                                 {
                                     Console.WriteLine("¡Todos los estudiantes han sido asignados roles!");
                                     ProgramExecution();
-                                    programRunning = false; 
+                                    programRunning = false;
                                 }
                                 else
                                 {
@@ -60,10 +88,10 @@ namespace StudentsSelector
                         {
                             Console.WriteLine($"Error: {ex.Message}");
                             Console.WriteLine("Se ha producido un error. Reiniciando el programa...");
-                            Thread.Sleep(2000); 
-                            Console.Clear(); 
+                            Thread.Sleep(2000);
+                            Console.Clear();
                             ProgramExecution();
-                            programRunning = false; 
+                            programRunning = false;
                         }
                         break;
                     case "volver":
@@ -81,34 +109,6 @@ namespace StudentsSelector
 
         public static string SelectStudent(string role)
         {
-            if (!UserAssignedRoles)
-            {
-                Console.WriteLine($"Antes de continuar, ¿deseas modificar los roles? Escribe 'Si' para continuar, 'No' para seguir con la ejecución.");
-                string? UserResponse = Console.ReadLine()?.ToLower();
-
-                if (UserResponse == "si")
-                {
-                    Console.WriteLine($"Ingrese el nuevo rol:");
-                    Role = Console.ReadLine();
-
-                    Console.WriteLine($"¿Quieres modificar el segundo rol?");
-                    string? UserResponse2 = Console.ReadLine()?.ToLower();
-
-                    if (UserResponse2 == "si")
-                    {
-                        Console.WriteLine($"Ingrese el nuevo segundo rol:");
-                        Role2 = Console.ReadLine();
-                    }
-
-                    UserAssignedRoles = true; 
-                }
-                else if (UserResponse == "no")
-                {
-                    Console.WriteLine("Continuando con la ejecución sin modificar roles.");
-                    UserAssignedRoles = true; 
-                }
-            }
-
             Role ??= "Desarrollador en vivo";
             Role2 ??= "Facilitador";
 
@@ -119,23 +119,22 @@ namespace StudentsSelector
             }
 
             bool isOdd = studentCount % 2 != 0;
-            Random random = new Random();
             int randomIndex = random.Next(studentCount);
 
             if (isOdd && studentCount == 1)
             {
                 string selectedStudent = StudentsList.AllStudents[0];
-                StudentsList.AssignedRoles[selectedStudent] = Role;
-
+                StudentsList.AssignedRoles[selectedStudent] = role;
                 StudentsList.RemoveStudentAt(0);
 
-                Console.WriteLine($"¡Hola {selectedStudent}! Eres seleccionado como {Role} y te tocará hacer el ejercicio más votado por el público.");
-                Console.ReadLine();
+                Console.WriteLine($"¡Hola {selectedStudent}! Eres seleccionado como {role} y te tocará hacer el ejercicio más votado por el público.");
+                Console.WriteLine("Presiona cualquier tecla para continuar...");
+                Console.ReadKey();
                 return "LAST_STUDENT_SELECTED";
             }
 
             int attempts = 0;
-            while (attempts < studentCount * 2) 
+            while (attempts < studentCount * 2)
             {
                 int index = randomIndex % studentCount;
                 string selectedStudent = StudentsList.AllStudents[index];
@@ -144,9 +143,15 @@ namespace StudentsSelector
                     (!StudentsList.AssignedRoles.ContainsKey(selectedStudent) || StudentsList.AssignedRoles[selectedStudent] != role))
                 {
                     StudentsList.AssignedRoles[selectedStudent] = role;
-
-                    
                     StudentsList.RemoveStudentAt(index);
+
+                    if (studentCount == 1)
+                    {
+                        Console.WriteLine($"¡Hola {selectedStudent}! Eres seleccionado como {role} y te tocará hacer el ejercicio más votado por el público.");
+                        Console.WriteLine("Presiona cualquier tecla para continuar...");
+                        Console.ReadKey();
+                        return "LAST_STUDENT_SELECTED";
+                    }
 
                     return selectedStudent;
                 }
@@ -155,7 +160,7 @@ namespace StudentsSelector
                 attempts++;
             }
 
-            return "NO_STUDENTS_AVAILABLE"; 
+            return "NO_STUDENTS_AVAILABLE";
         }
 
         public static void ProgramExecution()
