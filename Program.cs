@@ -1,25 +1,35 @@
 ﻿using System;
 using System.Threading;
+using System.Diagnostics;
 
 namespace StudentsSelector
 {
     public static class Program
     {
+
+
         private static string GetUserName()
         {
+
+            LoadingBar.LoadingBarInit();
+            Console.Clear();
+            Thread.Sleep(5000);
+            Console.ResetColor();
+            Sounds.StartSound();
             Console.WriteLine("Para iniciar el programa debes ingresar tu nombre:");
             string? name = Console.ReadLine();
 
             while (string.IsNullOrEmpty(name))
             {
                 Console.ForegroundColor = ConsoleColor.Red;
+                Sounds.Error();
                 Console.WriteLine("El usuario no ingresó ningún nombre. Por favor, ingrese su nombre:");
                 Console.ResetColor();
                 name = Console.ReadLine();
             }
-
+            Sounds.Acess();
             Console.WriteLine($"¡Hola, {name}! Ejecutando el programa...");
-            Thread.Sleep(2000);
+            Thread.Sleep(4000);
             return name;
         }
 
@@ -40,30 +50,41 @@ namespace StudentsSelector
                     switch (choice)
                     {
                         case 1:
+                            Console.ResetColor();
                             Console.Clear();
                             ProgramStudents.Init(); // Ejecutar la opción 1 (Init)
                             break;
                         case 2:
                             Console.Clear();
-                            string[] students = ShowStudents.ShowStudentsF();
 
-                            foreach (string student in students)
-                            {
-                                Console.WriteLine(student);
-                            }
-                            Console.WriteLine("Presiona cualquier tecla para continuar...");
-                            Console.ReadKey();
+                            // Display students within the console
+                            ShowStudents.ShowStudentsF();
+                            Console.ResetColor();
+                            Console.Clear();
+                            Console.ResetColor();
                             break;
                         case 3:
+                            Console.ResetColor();
                             GetRidStudents.DeleteStudents();
                             break;
                         case 4:
-                            // Implementar lógica para la opción 4
+
                             AddStudents.AddStudent();
                             break;
                         case 5:
-                            isProgramRunning = false; // Salir del programa
+                            Console.Clear();
+                            isProgramRunning = false;
                             Environment.Exit(0);
+                            break;
+                        case 6:
+                            string url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+
+                            Console.WriteLine("Opening the YouTube video...");
+                            Process.Start(new ProcessStartInfo
+                            {
+                                FileName = url,
+                                UseShellExecute = true
+                            });
                             break;
                         default:
                             Console.WriteLine("Opción no válida. Por favor, seleccione una opción válida.");

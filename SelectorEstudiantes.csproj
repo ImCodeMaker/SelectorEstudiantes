@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Windows.Extensions" Version="7.0.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+  <DefineConstants>$(DefineConstants);WINDOWS</DefineConstants>
+</PropertyGroup>
+
 </Project>

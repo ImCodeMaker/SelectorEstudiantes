@@ -18,7 +18,9 @@ namespace StudentsSelector
 
             AllStudents = new string[]
             {
-                // List of initial students
+
+
+               
                 "Alex Jose Rodriguez Taveras",
                 "Amaury Daniel Romero Gonzalez",
                 "Ashlee Ramirez Rosario",

@@ -43,3 +43,11 @@ C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\refint\SelectorEstud
 C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\SelectorEstudiantes.pdb
 C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\SelectorEstudiantes.genruntimeconfig.cache
 C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\ref\SelectorEstudiantes.dll
+C:\Users\xxjos\Desktop\SelectorEstudiantes\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\xxjos\Desktop\SelectorEstudiantes\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\xxjos\Desktop\SelectorEstudiantes\bin\Debug\net8.0\System.Windows.Extensions.dll
+C:\Users\xxjos\Desktop\SelectorEstudiantes\bin\Debug\net8.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\xxjos\Desktop\SelectorEstudiantes\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+C:\Users\xxjos\Desktop\SelectorEstudiantes\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\SelectorEstudiantes.csproj.AssemblyReference.cache
+C:\Users\xxjos\Desktop\SelectorEstudiantes\obj\Debug\net8.0\Selector.FD46105D.Up2Date

@@ -6,12 +6,21 @@ namespace StudentsSelector
     {
         public static void DeleteStudents()
         {
+
+
             string[] Students = StudentsList.AllStudents;
 
             Console.Write("Ingresa el nombre del estudiante a eliminar: ");
             string? UserSelection = Console.ReadLine();
 
-            if (!string.IsNullOrEmpty(UserSelection))
+            
+
+            if (UserSelection != null && UserSelection.Length < 2)
+            {
+                Console.WriteLine("Debes ingresar más de dos caracteres");
+                Thread.Sleep(1200);
+            }
+            else if (!string.IsNullOrEmpty(UserSelection))
             {
                 bool studentDeleted = false;
 
@@ -21,7 +30,7 @@ namespace StudentsSelector
                     {
                         StudentsList.RemoveStudentAt(i);
                         studentDeleted = true;
-                        i--; 
+                        i--;
                     }
                 }
 
@@ -30,7 +39,7 @@ namespace StudentsSelector
                     Console.WriteLine("Updated list of students:");
                     foreach (string student in StudentsList.AllStudents)
                     {
-                        if (!string.IsNullOrEmpty(student)) 
+                        if (!string.IsNullOrEmpty(student))
                         {
                             Console.WriteLine(student);
                         }
