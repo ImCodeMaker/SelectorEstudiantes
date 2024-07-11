@@ -59,5 +59,18 @@ namespace StudentsSelector
                 Console.WriteLine("Sound playback is only supported on Windows.");
             }
         }
+
+        public static void Final(){
+            if (OperatingSystem.IsWindows())
+            {
+                SoundPlayer player = new SoundPlayer();
+                player.SoundLocation = @"C:\Users\xxjos\Desktop\SelectorEstudiantes\Extras\CompleteSong.wav";
+                player.Play();
+            }
+            else
+            {
+                Console.WriteLine("Sound playback is only supported on Windows.");
+            }
+        }
     }
 }

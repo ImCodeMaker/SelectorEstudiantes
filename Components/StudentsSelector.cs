@@ -12,10 +12,15 @@ namespace StudentsSelector
 
         public static void Init()
         {
+            Console.ResetColor();
+            Console.Clear();
+            Console.Clear();
             bool programRunning = true;
 
             while (programRunning)
             {
+                Console.ResetColor();
+                Console.Clear();
                 Console.Clear();
                 Console.WriteLine("Bienvenido al Selector de Usuarios");
                 Console.WriteLine("¿Desea continuar o salir?");
@@ -57,6 +62,21 @@ namespace StudentsSelector
                                 }
                             }
 
+                            Console.ResetColor();
+                            Console.Clear();
+
+                            MostrarTexto();
+
+                            for (int i = 0; i < 10; i++)
+                            {
+                                Console.Write(".");
+                                Thread.Sleep(500); // Adjust the sleep time to change animation speed
+                            }
+
+                            Console.WriteLine();
+                            Console.WriteLine("Loading Complete!");
+                            Thread.Sleep(5000);
+
                             string developer = SelectStudent(Role ?? "Desarrollador en Vivo:");
                             string facilitator = SelectStudent(Role2 ?? "Facilitador:");
 
@@ -68,9 +88,12 @@ namespace StudentsSelector
                             }
                             else
                             {
+
+                                MostrarTexto();
                                 Console.WriteLine($"{Role} seleccionado: {developer}");
                                 Console.WriteLine($"{Role2} seleccionado: {facilitator}");
-
+                                Sounds.Final();
+                                Thread.Sleep(10000);
                                 if (developer == "LAST_STUDENT_SELECTED")
                                 {
                                     Console.WriteLine("¡Todos los estudiantes han sido asignados roles!");
@@ -107,6 +130,31 @@ namespace StudentsSelector
             }
         }
 
+        public static void MostrarTexto()
+        {
+            Console.WriteLine(@"
+                            
+                            
+                            
+                                                                            
+                                                ░██████╗████████╗██╗░░░██╗██████╗░███████╗███╗░░██╗████████╗
+                                                ██╔════╝╚══██╔══╝██║░░░██║██╔══██╗██╔════╝████╗░██║╚══██╔══╝
+                                                ╚█████╗░░░░██║░░░██║░░░██║██║░░██║█████╗░░██╔██╗██║░░░██║░░░
+                                                ░╚═══██╗░░░██║░░░██║░░░██║██║░░██║██╔══╝░░██║╚████║░░░██║░░░
+                                                ██████╔╝░░░██║░░░╚██████╔╝██████╔╝███████╗██║░╚███║░░░██║░░░
+                                                ╚═════╝░░░░╚═╝░░░░╚═════╝░╚═════╝░╚══════╝╚═╝░░╚══╝░░░╚═╝░░░
+
+                                                ░██████╗███████╗██╗░░░░░███████╗░█████╗░████████╗██╗░█████╗░███╗░░██╗
+                                                ██╔════╝██╔════╝██║░░░░░██╔════╝██╔══██╗╚══██╔══╝██║██╔══██╗████╗░██║
+                                                ╚█████╗░█████╗░░██║░░░░░█████╗░░██║░░╚═╝░░░██║░░░██║██║░░██║██╔██╗██║
+                                                ░╚═══██╗██╔══╝░░██║░░░░░██╔══╝░░██║░░██╗░░░██║░░░██║██║░░██║██║╚████║
+                                                ██████╔╝███████╗███████╗███████╗╚█████╔╝░░░██║░░░██║╚█████╔╝██║░╚███║
+                                                ╚═════╝░╚══════╝╚══════╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚═╝░░╚══╝
+                            
+
+                            ");
+        }
+
         public static string SelectStudent(string role)
         {
             Role ??= "Desarrollador en vivo";
@@ -127,9 +175,17 @@ namespace StudentsSelector
                 StudentsList.AssignedRoles[selectedStudent] = role;
                 StudentsList.RemoveStudentAt(0);
 
-                Console.WriteLine($"¡Hola {selectedStudent}! Eres seleccionado como {role} y te tocará hacer el ejercicio más votado por el público.");
+                // Display selection
+                Console.Clear();
+                Console.WriteLine("════════════════════════════════════════");
+                Console.WriteLine("          ¡Seleccionado!                  ");
+                Console.WriteLine("----------------------------------------");
+                Console.WriteLine($"¡Hola {selectedStudent}!");
+                Console.WriteLine($"Eres seleccionado como {role}.");
+                Console.WriteLine("----------------------------------------");
                 Console.WriteLine("Presiona cualquier tecla para continuar...");
                 Console.ReadKey();
+
                 return "LAST_STUDENT_SELECTED";
             }
 
@@ -145,13 +201,44 @@ namespace StudentsSelector
                     StudentsList.AssignedRoles[selectedStudent] = role;
                     StudentsList.RemoveStudentAt(index);
 
-                    if (studentCount == 1)
-                    {
-                        Console.WriteLine($"¡Hola {selectedStudent}! Eres seleccionado como {role} y te tocará hacer el ejercicio más votado por el público.");
-                        Console.WriteLine("Presiona cualquier tecla para continuar...");
-                        Console.ReadKey();
-                        return "LAST_STUDENT_SELECTED";
-                    }
+                    // Display selection
+                    Console.Clear();
+                    Console.WriteLine("════════════════════════════════════════");
+                    Console.WriteLine("          ¡Seleccionado!                  ");
+                    Console.WriteLine("----------------------------------------");
+                    Console.WriteLine($"¡Hola {selectedStudent}!");
+                    Console.WriteLine($"Eres seleccionado como {role}.");
+                    Console.WriteLine("----------------------------------------");
+
+
+
+
+
+                    // Gentle animation
+                    Thread.Sleep(500);
+                    Console.Clear();
+
+                    Console.WriteLine("════════════════════════════════════════");
+                    Console.WriteLine("          ¡Seleccionado!                  ");
+                    Console.WriteLine("----------------------------------------");
+                    Console.WriteLine($"¡Hola {selectedStudent}!");
+                    Console.WriteLine($"Eres seleccionado como {role}.");
+                    Console.WriteLine("----------------------------------------");
+
+                    Thread.Sleep(500);
+                    Console.Clear();
+
+                    // Display final selection
+                    Console.WriteLine("════════════════════════════════════════");
+                    Console.WriteLine("          ¡Seleccionado!                  ");
+                    Console.WriteLine("----------------------------------------");
+                    Console.WriteLine($"¡Hola {selectedStudent}!");
+                    Console.WriteLine($"Eres seleccionado como {role}.");
+                    Console.WriteLine("----------------------------------------");
+                    Console.WriteLine("Presiona cualquier tecla para continuar...");
+                    Console.ReadKey();
+                    Console.ResetColor();
+                    Console.Clear();
 
                     return selectedStudent;
                 }

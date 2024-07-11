@@ -26,6 +26,8 @@ namespace StudentsSelector
                     if (index != -1)
                     {
                         StudentsList.AllStudents[index] = UserSelection;
+                        Console.ResetColor();
+                        Console.Clear();
                         Console.WriteLine($"Estudiante '{UserSelection}' añadido exitosamente.");
                     }
                     else

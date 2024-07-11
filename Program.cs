@@ -33,6 +33,8 @@ namespace StudentsSelector
             return name;
         }
 
+        
+
         public static void Main(string[] args)
         {
             bool isProgramRunning = true;
@@ -50,18 +52,17 @@ namespace StudentsSelector
                     switch (choice)
                     {
                         case 1:
+                            Console.Clear();
                             Console.ResetColor();
                             Console.Clear();
                             ProgramStudents.Init(); // Ejecutar la opción 1 (Init)
                             break;
                         case 2:
-                            Console.ResetColor();
                             Console.Clear();
-
-                            // Display students within the console
+                            Console.ResetColor();
                             ShowStudents.ShowStudentsF();
-                            Console.ResetColor();
-                            Console.Clear();
+                            Console.WriteLine("\nPresiona cualquier tecla para regresar al menú principal...");
+                            Console.ReadKey(true); 
                             Console.ResetColor();
                             Console.Clear();
                             break;
@@ -78,10 +79,11 @@ namespace StudentsSelector
                             isProgramRunning = false;
                             Console.ResetColor();
                             Console.Clear();
+                            
                             Environment.Exit(0);
                             break;
                         case 6:
-                            string url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+                            string url = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
 
                             Console.WriteLine("Opening the YouTube video...");
                             Process.Start(new ProcessStartInfo
