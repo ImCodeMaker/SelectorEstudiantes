@@ -65,6 +65,8 @@ namespace StudentsSelector
                         case 2:
                             Console.Clear();
                             Console.ResetColor();
+                            Console.Clear();
+                            Console.ResetColor();
                             ShowStudents.ShowStudentsF();
                             Console.WriteLine("\nPresiona cualquier tecla para regresar al menú principal...");
                             Console.ReadKey(true);

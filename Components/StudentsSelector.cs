@@ -46,7 +46,7 @@ namespace StudentsSelector
                                     Console.WriteLine($"Ingrese el nuevo rol:");
                                     Role = Console.ReadLine();
 
-                                    Console.WriteLine($"¿Quieres modificar el segundo rol?");
+                                    Console.WriteLine($"¿Quieres modificar el segundo rol? Escribe 'Si' para continuar, 'No' para seguir con la ejecución.");
                                     string? UserResponse2 = Console.ReadLine()?.ToLower();
 
                                     if (UserResponse2 == "si")
@@ -72,7 +72,7 @@ namespace StudentsSelector
                             for (int i = 0; i < 10; i++)
                             {
                                 Console.Write(".");
-                                Thread.Sleep(500); // Adjust the sleep time to change animation speed
+                                Thread.Sleep(500); 
                             }
 
                             Console.WriteLine();

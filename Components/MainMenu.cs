@@ -9,7 +9,6 @@ namespace StudentsSelector
             Console.Clear();
             Console.Clear(); // En caso de que el otro no funcione XD
             Console.ResetColor();
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
             CenterText(@"
                                                         ███╗░░░███╗███████╗███╗░░██╗██╗░░░██╗
                                                         ████╗░████║██╔════╝████╗░██║██║░░░██║
